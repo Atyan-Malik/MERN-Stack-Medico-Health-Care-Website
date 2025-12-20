@@ -1,0 +1,133 @@
+.head1 {
+  background-color: #93d1e7;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.head-detail {
+  display: flex;
+  justify-content: space-around;
+  gap: 7rem;
+  padding: 10px 20px;
+}
+
+i {
+  color: blue;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.head2 {
+  background: linear-gradient(90deg, #1e3c72, #2a5298, #6dd5fa);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar {
+  display: flex;
+  gap: 50px;
+}
+
+.navbar a {
+  color: aliceblue;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.socials {
+  display: flex;
+  gap: 20px;
+}
+
+.socials button {
+  background-color: rgb(77, 77, 212);
+  padding: 6px 10px;
+  color: white;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  width: 110px;
+  font-weight: bold;
+}
+.dashb-btn {
+  font-size: 1.2rem;
+  padding: 2px 2px;
+  width: 90px;
+  background: blue;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 26px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+  border-radius: 3px;
+}
+
+
+
+@media (max-width: 768px) {
+  .head-detail {
+    display: none;
+  }
+
+  .head1 .logo {
+    margin: auto;
+    text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+    z-index: 1001;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 145px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 160px);
+    background: linear-gradient(90deg, #1e3c72, #2a5298, #6dd5fa);
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 30px;
+    gap: 25px;
+
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+
+  .navbar.active {
+    transform: translateX(0);
+  }
+
+  .navbar a {
+    font-size: 18px;
+  }
+
+  .dashb-btn {
+    width: 120px;
+  }
+
+  .socials button {
+    width: 90px;
+    font-size: 14px;
+  }
+}

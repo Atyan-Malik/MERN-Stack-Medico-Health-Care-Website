@@ -1,0 +1,21 @@
+.animated-offer {
+  text-align: center;
+  margin: 50px 0;
+  font-size: 2rem;
+  color: #0f4c75;
+  font-weight: bold;
+  background-color: #93d1e7;
+  padding:20px 20px;
+}
+
+.typewriter {
+  color: white;
+  border-right: 2px solid #3282b8;
+  padding-right: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { border-color: #3282b8; }
+  25%, 75% { border-color: transparent; }
+}
