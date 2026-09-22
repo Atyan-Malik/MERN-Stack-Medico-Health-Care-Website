@@ -1,6 +1,6 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import "../Animation/animated.css"
+import "../Animation/Animated.css"
 
 
 export default function AnimatedOffer() {
