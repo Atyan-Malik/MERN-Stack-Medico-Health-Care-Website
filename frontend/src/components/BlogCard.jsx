@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import "../styles/BlogCard.css"
 const BlogCard = ({ blog }) => {
   return (
     <div className="blog-card">

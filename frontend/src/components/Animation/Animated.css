@@ -1,21 +1,166 @@
+
+/* =========================================
+   MEDICO — ANIMATED OFFER
+========================================= */
+
 .animated-offer {
-  text-align: center;
-  margin: 50px 0;
-  font-size: 2rem;
-  color: #0f4c75;
-  font-weight: bold;
-  background-color: #93d1e7;
-  padding:20px 20px;
+  position: relative;
+
+  width: 100%;
+  padding: 32px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: linear-gradient(
+    135deg,
+    #0f4c75 0%,
+    #3282b8 100%
+  );
+
+  overflow: hidden;
+
+  box-sizing: border-box;
 }
+
+/* Subtle background details */
+
+.animated-offer::before {
+  content: "";
+
+  position: absolute;
+  width: 260px;
+  height: 260px;
+
+  top: -150px;
+  left: 8%;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.animated-offer::after {
+  content: "";
+
+  position: absolute;
+  width: 220px;
+  height: 220px;
+
+  right: 8%;
+  bottom: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.animated-offer h2 {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  color: rgba(255, 255, 255, 0.9);
+
+  font-size: clamp(1.15rem, 2.2vw, 1.65rem);
+  font-weight: 500;
+
+  line-height: 1.5;
+  text-align: center;
+
+  letter-spacing: 0.2px;
+}
+
+/* =========================================
+   TYPEWRITER TEXT
+========================================= */
 
 .typewriter {
-  color: white;
-  border-right: 2px solid #3282b8;
-  padding-right: 5px;
-  animation: blink 0.7s infinite;
+  display: inline-flex;
+  align-items: center;
+
+  min-width: 270px;
+
+  color: #ffffff;
+
+  font-weight: 800;
+
+  text-shadow:
+    0 2px 10px rgba(15, 76, 117, 0.25);
 }
 
-@keyframes blink {
-  0%, 50%, 100% { border-color: #3282b8; }
-  25%, 75% { border-color: transparent; }
+/* Cursor */
+
+.typewriter span {
+  color: #ffffff;
+}
+
+/* =========================================
+   DESKTOP DETAIL
+========================================= */
+
+@media (min-width: 900px) {
+  .animated-offer {
+    min-height: 82px;
+  }
+
+  .animated-offer h2 {
+    font-size: 1.45rem;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 700px) {
+  .animated-offer {
+    padding: 26px 18px;
+  }
+
+  .animated-offer h2 {
+    font-size: 1.15rem;
+    gap: 5px;
+  }
+
+  .typewriter {
+    min-width: 220px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+  .animated-offer {
+    padding: 23px 15px;
+  }
+
+  .animated-offer h2 {
+    display: block;
+
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  .typewriter {
+    min-width: auto;
+    margin-left: 4px;
+
+    font-size: 1.05rem;
+  }
 }

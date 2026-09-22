@@ -1,3 +1,4 @@
+
 import "../styles/doctors.css";
 
 const doctorsData = [
@@ -5,82 +6,115 @@ const doctorsData = [
     id: 1,
     name: "Dr. Ahmed Khan",
     college: "King Edward Medical University",
-    image: "https://images.unsplash.com/photo-1582750433449-648ed127bb54"
+    image:
+      "/doc1.jpg",
   },
   {
     id: 2,
     name: "Dr. Sara Malik",
     college: "Dow Medical College",
-    image: "https://images.unsplash.com/photo-1550831107-1553da8c8464"
+    image:
+      "/ser4.jpg",
   },
   {
     id: 3,
     name: "Dr. Ali Raza",
     college: "Aga Khan University",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d"
+    image:
+      "doc2.jpg",
   },
-  
   {
     id: 5,
     name: "Dr. Hassan Ahmed",
     college: "Allama Iqbal Medical College",
-    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+    image:
+      "doc1.jpg",
   },
   {
     id: 6,
     name: "Dr. Ayesha Siddiq",
     college: "Liaquat University of Medical Sciences",
-    image: "https://images.unsplash.com/photo-1594824476967-48c8b964273f"
+    image:
+      "doc3.jpg",
   },
   {
     id: 7,
     name: "Dr. Usman Tariq",
     college: "Rawalpindi Medical University",
-    image: "https://images.unsplash.com/photo-1622253692010-333f2da6031d"
+    image:
+      "ser1.jpg",
   },
   {
     id: 8,
     name: "Dr. Maryam Iqbal",
     college: "Nishtar Medical University",
-    image: "https://images.unsplash.com/photo-1614608682850-e0d6ed316d47"
+    image:
+      "ser3.jpg",
   },
- 
   {
     id: 10,
     name: "Dr. Hina Aslam",
     college: "Islamabad Medical & Dental College",
-    image: "https://images.unsplash.com/photo-1551601651-2a8555f1a136"
+    image:
+      "ser6.jpg",
   },
-  {
-    id: 11,
-    name: "Dr. Salman Farooq",
-    college: "Khyber Medical College",
-    image: "https://images.unsplash.com/photo-1584515933487-779824d29309"
-  },
-  {
-    id: 12,
-    name: "Dr. Noor ul Ain",
-    college: "Jinnah Sindh Medical University",
-    image: "https://images.unsplash.com/photo-1603398938378-e54eab446dde"
-  }
+ 
 ];
-
 
 const Doctors = () => {
   return (
-    <div className="doctors-page">
-      <h2 className="doctors-title">Our Doctors</h2>
+    <section className="doctors-page">
+      <div className="doctors-container">
+        <div className="doctors-header">
+          <span className="doctors-label">Meet Our Specialists</span>
 
-      <div className="doctors-grid">
-        {doctorsData.map((doctor) => (
-          <div className="doctor-card" key={doctor.id}>
-            <img src={doctor.image} alt={doctor.name} />
-            <h3>{doctor.name}</h3>
-            <p>{doctor.college}</p>
-          </div>
-        ))}
+          <h2>
+            Our Trusted
+            <span> Doctors</span>
+          </h2>
+
+          <p>
+            Meet our experienced healthcare professionals dedicated to
+            providing compassionate, reliable, and patient-focused care.
+          </p>
+        </div>
+
+        <div className="doctors-grid">
+          {doctorsData.map((doctor) => (
+            <article className="doctor-card" key={doctor.id}>
+              <div className="doctor-image">
+                <img src={doctor.image} alt={doctor.name} />
+
+                <div className="doctor-overlay">
+                  <span>
+                    <i className="ri-stethoscope-line"></i>
+                    Medical Specialist
+                  </span>
+                </div>
+              </div>
+
+              <div className="doctor-content">
+                <h3>{doctor.name}</h3>
+
+                <div className="doctor-college">
+                  <i className="ri-hospital-line"></i>
+                  <p>{doctor.college}</p>
+                </div>
+
+                <div className="doctor-footer">
+                  <span>
+                    <i className="ri-checkbox-circle-line"></i>
+                    Verified Professional
+                  </span>
+
+                  <i className="ri-arrow-right-line"></i>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
